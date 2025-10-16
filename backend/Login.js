@@ -17,7 +17,7 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5010;
 app.listen(PORT, () => {
-  console.log(`🔐 Auth server running on port ${PORT}`);
+  console.log(` Auth server running on port ${PORT}`);
 });
 
 process.on('SIGINT', () => {
