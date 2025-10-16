@@ -1,0 +1,377 @@
+/* UserAttendance.css */
+.user-attendance-container {
+  padding: 1rem;
+  padding-top: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.attendance-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.attendance-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.attendance-header h2 {
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.attendance-header p {
+  color: #718096;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Alert Messages */
+.alert-message {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.875rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.alert-message.success {
+  background-color: #f0fff4;
+  color: #2f855a;
+  border: 1px solid #c6f6d5;
+}
+
+.alert-message.error {
+  background-color: #fff5f5;
+  color: #c53030;
+  border: 1px solid #fed7d7;
+}
+
+.alert-icon {
+  margin-right: 0.75rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.debug-info {
+  background-color: #edf2f7;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #4a5568;
+}
+
+/* Scan Init Container */
+.scan-init-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.permission-status {
+  margin-bottom: 1rem;
+}
+
+.camera-warning {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fffaf0;
+  color: #c05621;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.warning-icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.scan-button-container {
+  margin: 1.5rem 0;
+}
+
+.btn-scan-qr {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.btn-scan-qr.primary {
+  background-color: #4299e1;
+  color: white;
+  box-shadow: 0 4px 6px rgba(66, 153, 225, 0.3);
+}
+
+.btn-scan-qr.primary:hover:not(:disabled) {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(66, 153, 225, 0.4);
+}
+
+.btn-scan-qr:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.scan-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.manual-fallback {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.fallback-text {
+  color: #718096;
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.btn-manual {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #f7fafc;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-manual:hover {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+/* Scanner Container */
+.scanner-container {
+  margin-bottom: 1.5rem;
+}
+
+.scanner-viewport {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: #000;
+}
+
+.scanner-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.scan-frame {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.frame-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: #4299e1;
+  border-style: solid;
+  border-width: 0;
+}
+
+.frame-corner.top-left {
+  top: -2px;
+  left: -2px;
+  border-top-width: 4px;
+  border-left-width: 4px;
+  border-top-left-radius: 6px;
+}
+
+.frame-corner.top-right {
+  top: -2px;
+  right: -2px;
+  border-top-width: 4px;
+  border-right-width: 4px;
+  border-top-right-radius: 6px;
+}
+
+.frame-corner.bottom-left {
+  bottom: -2px;
+  left: -2px;
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+  border-bottom-left-radius: 6px;
+}
+
+.frame-corner.bottom-right {
+  bottom: -2px;
+  right: -2px;
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+  border-bottom-right-radius: 6px;
+}
+
+.scan-instruction {
+  color: white;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.scanner-controls {
+  text-align: center;
+}
+
+.btn-cancel {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #f7fafc;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+/* Instructions */
+.instructions-container {
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.instructions-container h4 {
+  color: #2d3748;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+.instructions-list {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem 0;
+  color: #4a5568;
+}
+
+.instructions-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.note-box {
+  background-color: #fffaf0;
+  border-left: 4px solid #ecc94b;
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  color: #744210;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .user-attendance-container {
+    padding: 0.5rem;
+  }
+  
+  .attendance-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+  
+  .scanner-viewport {
+    height: 250px;
+  }
+  
+  .scan-frame {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .btn-scan-qr {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 400px) {
+  .scan-frame {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .scanner-viewport {
+    height: 220px;
+  }
+}
+
+/* Animation for scanning */
+@keyframes pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.scan-instruction {
+  animation: pulse 2s infinite;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .scan-instruction {
+    animation: none;
+  }
+  
+  .btn-scan-qr,
+  .btn-manual,
+  .btn-cancel {
+    transition: none;
+  }
+}

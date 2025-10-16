@@ -1,0 +1,47 @@
+.attendance-management {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .attendance-management {
+    padding: 10px;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+.qr-dialog img {
+  max-width: 100%;
+  height: auto;
+}
+
+.session-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-chip {
+  margin: 2px;
+}
+.MuiDialog-paper {
+  margin: 16px;
+}
+
+.MuiTableContainer-root {
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .MuiTableCell-root {
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+  
+  .MuiButton-root {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
